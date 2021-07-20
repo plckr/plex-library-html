@@ -90,3 +90,8 @@ lerna-debug.log
 # System Files
 .DS_Store
 Thumbs.db
+
+# Composer
+/api/composer.phar
+/api/vendor/
+/api/composer.lock

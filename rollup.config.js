@@ -1,5 +1,6 @@
 import commonjs from 'rollup-plugin-commonjs';
 import resolve from 'rollup-plugin-node-resolve';
+import replace from '@rollup/plugin-replace';
 // import { terser } from 'rollup-plugin-terser';
 
 const plugins = [
@@ -7,12 +8,16 @@ const plugins = [
       mainFields: false, // <-- this library is not an ES6 module
       browser: true, // <-- suppress node-specific features
   }),
-  commonjs()
+  commonjs(),
+  replace({
+    'process.env.NODE_ENV': JSON.stringify('production'),
+    __buildDate__: () => JSON.stringify(new Date())
+  })
 ];
 
 export default [
   {
-    input: 'src/index.js',
+    input: 'src/app-container.js',
     output: {
       file: 'dist/app.js',
       format: 'umd',

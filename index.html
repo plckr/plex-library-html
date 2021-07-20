@@ -3,10 +3,70 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
         
         <style>
+            @font-face {
+                font-weight: 400;
+                font-style: normal;
+                font-display: swap;
+                font-family: 'Open Sans Regular';
+                src: url(/dist/fonts/open-sans-regular.woff) format("woff");
+            }
+        
+            @font-face {
+                font-weight: 400;
+                font-style: normal;
+                font-display: swap;
+                font-family: 'Open Sans Semibold';
+                src: url(/dist/fonts/open-sans-semibold.woff) format("woff");
+            }
+        
+            @font-face {
+                font-weight: 400;
+                font-style: normal;
+                font-display: swap;
+                font-family: 'Open Sans Bold';
+                src: url(/dist/fonts/open-sans-bold.woff) format("woff");
+            }
+
+            * {
+                font-family: 'Open Sans Regular', Helvetica Neue, Helvetica, Arial, sans-serif;
+                color: rgba(255,255,255,0.75);
+            }
+
+            @media mobile and (max-width: 600px) {
+                :root {
+                    font-size: calc(4px + 1vw);
+                }
+            }
+            :root {
+                font-size: clamp(12px, 2vw, 12pt);
+            }
             body {
-                overflow-y: hidden;
+                min-height: 100vh;
+                height: 100vh;
+                max-height: 100vh;
+                min-width: 100vw;
+                width: 100vw;
+                max-width: 100vw;
                 position: absolute;
                 margin: 0;
                 top: 0;
@@ -15,12 +75,76 @@
                 left: 0;
                 background-color: #3f4245;
             }
+            h1, h2, h3 {
+                font-weight: 700;
+            }
+            a {
+                color: rgba(255,255,255,0.75);
+                font-weight: 600;
+                transition: color .1s ease;
+            }
+            a:hover {
+                color: rgba(255,255,255,1);
+            }
+            a:focus {
+                outline: none;
+            }
+            ol.faq>li>p {
+                font-weight: 700;
+                margin-bottom: 0;
+                text-decoration: underline;
+            }
+            ol.faq>li>span {
+                color: rgba(255,255,255,0.65);
+            }
         </style>
 
         <title>Plex Library List</title>
     </head>
     <body>
-        <app-container></app-container>
+        <app-container>
+            <h1>Plex Library</h1>
+            <h2>Welcome to my Plex library</h2>
+
+            <div>
+                WWW Frontend viewer of Plex's Library.
+                <br>
+                Find me on <a href="https://github.com/ricreis394/plex-library-html">GitHub</a>
+            </div>
+                
+            <h3>Features</h3>
+            <ul class="features">
+                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                <li>Maecenas eget erat sit amet leo pharetra vestibulum vitae sed dolor.</li>
+                <li>Curabitur sodales augue in arcu viverra maximus.</li>
+                <li>Cras lacinia erat dapibus orci sollicitudin cursus vel at elit.</li>
+            </ul>
+
+            <h3>FAQ</h3>
+            <ol class="faq">
+                <li>
+                    <p>Suspendisse viverra felis tempus, luctus nulla sed, imperdiet leo.</p>
+                    <span>Ut sit amet metus in felis pulvinar sodales in ut lectus.</span>
+                </li>
+                <li>
+                    <p>Cras gravida mi in luctus maximus.</p>
+                    <span>Vestibulum a odio sed enim mollis euismod.</span>
+                </li>
+                <li>
+                    <p>Suspendisse viverra felis tempus, luctus nulla sed, imperdiet leo.</p>
+                    <span>Ut sit amet metus in felis pulvinar sodales in ut lectus.</span>
+                </li>
+                <li>
+                    <p>Cras gravida mi in luctus maximus.</p>
+                    <span>Vestibulum a odio sed enim mollis euismod.</span>
+                </li>
+            </ol>
+            <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                <br>
+                Quisque volutpat nulla ac sem luctus, euismod tempus tellus ornare.
+            </div>
+        </app-container>
         <script type="module" src="/dist/app.js"></script>
     </body>
 </html>

@@ -1,24 +1,25 @@
 {
   "name": "plex-library-html",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "polymer serve --npm",
     "build": "npm run rollup",
-    "rollup": "rollup -c"
+    "rollup": "rollup -c",
+    "php": "php -S localhost:8001"
   },
   "author": "Ricardo Reis",
   "license": "ISC",
   "dependencies": {
+    "@rollup/plugin-replace": "^2.4.2",
+    "@rollup/plugin-typescript": "^8.2.1",
+    "axios": "^0.21.1",
     "dayjs": "^1.9.6",
-    "lit-element": "^2.4.0",
-    "lit-element-router": "^2.0.3",
+    "lit": "^2.0.0-rc.1",
     "page": "^1.11.6",
-    "rollup": "^2.33.3",
     "rollup-plugin-commonjs": "^10.1.0",
-    "rollup-plugin-node-resolve": "^5.2.0",
-    "xlsx": "^0.16.9"
+    "rollup-plugin-node-resolve": "^5.2.0"
   }
 }
