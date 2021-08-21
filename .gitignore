@@ -1,8 +1,4 @@
 # compiled output
-/dist/*
-!/dist/fonts
-!/dist/img/
-/dist/img/posters
 /tmp
 /out-tsc
 
