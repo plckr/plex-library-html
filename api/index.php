@@ -4,7 +4,7 @@ require __DIR__ . '/vendor/autoload.php';
 define('BASE_URL', '/api');
 define('BASE_URL_IMG', '/img');
 require __DIR__ . '/settings.php';
-require __DIR__ . '/aux.php';
+require __DIR__ . '/utils.php';
 
 $router = new \Bramus\Router\Router();
 
